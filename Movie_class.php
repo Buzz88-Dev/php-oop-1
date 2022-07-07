@@ -7,7 +7,7 @@
     public $titolo;
     public $anno_di_uscita;
     public $durata;
-    public $intervallo_cinema = 'NO';
+    public $intervallo_cinema;
     public $regista = 'Peter Jackson';
 
     public function __construct(string $title, int $year, int $duration)
@@ -22,6 +22,8 @@
     public function intervallo(){
         if ($this -> durata > 170){
             $this -> intervallo_cinema = 'SI';
+        } else {
+            $this -> intervallo_cinema = 'NO';
         }
     }
  }
